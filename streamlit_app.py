@@ -45,7 +45,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1uj2lD8goJDLo9uSg_8HcT4bxnl2trPc8")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1snW4O2kwcWTN7UrlYp1PgCXKkXa5RrA2")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -74,8 +74,12 @@ CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
     #   "images": ["https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
     #   "videos": ["https://youtu.be/XXXXXXXXXXX"]
     # },
-}
+    labels[0] : {"texts": ["중국식 냉면은 더울때 먹는 음식이다"],"images": ["https://www.esquirekorea.co.kr/resources_old/online/org_online_image/eq/71c93efd-352d-4fb4-8a98-dd1b51475442.jpg"],"videos": ["https://www.youtube.com/watch?v=JGPPYe7l6qE"]},
+    labels[1] : {"texts": ["짜장면은 무난하게 먹는 음식이다"],"images": ["https://i.namu.wiki/i/j2AxLP9AtrcJebh4DVfGxowfXwI3a95dG_YZb_Ktczc6Ca7ACyd_NJL3YHQMw8SABGTQiJDwSpySOSSBLZVEZw.webp"],"videos": ["https://www.youtube.com/watch?v=Gw2Fq94NQwo"]},
+    labels[2] : {"texts": ["짬뽕은 매콤하다"],"images": ["https://i.namu.wiki/i/upNZ7cYsFsAfU0KcguO6OHMK68xC-Bj8EXxdCti61Jhjx10UCBgdK5bZCEx41-aAWcjWZ5JMKFUSaUGLC1tqWg.webp"],"videos": ["https://www.youtube.com/watch?v=3FBKcTumM5w"]},
+    labels[3] : {"texts": ["탕수육은 소스에 찍어먹는 음식이"],"images": ["https://i.namu.wiki/i/DQPzlCdDvbadZasufp6VhKSLDPHU4YlA1f9GbY2fP9nMvjNOSE32JZxL_ysj2duhcUtcWo-cGQvO_qS3rXctJw.webp"],"videos": ["https://www.youtube.com/watch?v=e9jHy8AJ4yc"]},
 
+}
 # ======================
 # 유틸
 # ======================
